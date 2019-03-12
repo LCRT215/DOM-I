@@ -71,6 +71,35 @@ ctaText.getElementsByTagName("h1")[0].innerHTML = siteContent["cta"]["h1"];
 const ctaButton = document.querySelector("button");
 ctaButton.textContent = siteContent["cta"]["button"];
 
+const ctaImg = document.getElementById("cta-img");
+ctaImg.src = siteContent["cta"]["img-src"];
+
+//MAIN-CONTENT
+
+// const topContent1 = document.getElementsByClassName("top-content");
+// topContent1.add("topContent1");
+
+// nav.forEach((link, i) => {
+//   link.innerHTML = siteContent.nav[`nav-item-${i + 1}`];
+// });
+
+//MIDDLE IMG
+const midImg = document.getElementById("middle-img");
+midImg.src = siteContent["main-content"]["middle-img-src"];
+
+//CONTACT
+const contact = document.getElementsByClassName("contact")[0];
+console.log(contact);
+
+contact.getElementsByTagName("h4")[0].innerHTML =
+  siteContent["contact"]["contact-h4"];
+contact.getElementsByTagName("p")[0].innerHTML =
+  siteContent["contact"]["address"];
+contact.getElementsByTagName("p")[1].innerHTML =
+  siteContent["contact"]["phone"];
+contact.getElementsByTagName("p")[2].innerHTML =
+  siteContent["contact"]["email"];
+
 //FOOTER
 const footer = document.querySelector("footer");
 footer.textContent = siteContent["footer"]["copyright"];
