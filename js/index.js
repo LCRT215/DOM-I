@@ -54,3 +54,17 @@ const siteContent = {
 // const ctaH1 = document.getElementsByClassName("cta-text")[0];
 
 // ctaH1.getElementByTagName("h1")[0].innerHTML = siteContent['cta']["h1"]
+
+//NAV
+const nav = document.querySelectorAll("nav a");
+nav.forEach((link, i) => {
+  link.innerHTML = siteContent.nav[`nav-item-${i + 1}`];
+});
+
+//LOGO
+const logo = document.getElementById("logo-img");
+logo.src = siteContent["nav"]["img-src"];
+
+//FOOTER
+const footer = document.querySelectorAll("footer p");
+footer.textContent = siteContent.footer[copyright];
