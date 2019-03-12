@@ -61,10 +61,16 @@ nav.forEach((link, i) => {
   link.innerHTML = siteContent.nav[`nav-item-${i + 1}`];
 });
 
-//LOGO
 const logo = document.getElementById("logo-img");
 logo.src = siteContent["nav"]["img-src"];
 
+//CTA SECTION
+const ctaText = document.getElementsByClassName("cta-text")[0];
+ctaText.getElementsByTagName("h1")[0].innerHTML = siteContent["cta"]["h1"];
+
+const ctaButton = document.querySelector("button");
+ctaButton.textContent = siteContent["cta"]["button"];
+
 //FOOTER
-const footer = document.querySelectorAll("footer p");
-footer.textContent = siteContent.footer[copyright];
+const footer = document.querySelector("footer");
+footer.textContent = siteContent["footer"]["copyright"];
