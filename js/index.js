@@ -63,8 +63,13 @@ nav.forEach((link, i) => {
 
 const logo = document.getElementById("logo-img");
 logo.src = siteContent["nav"]["img-src"];
+console.log(nav);
 
-// document.querySelectorAll("nav a").style.color = "#ff0000";
+nav[0].style.color = "green";
+nav.forEach(currentValue => {
+  currentValue.style.color = "green";
+});
+//.style.color = "#ff0000";
 
 //CTA SECTION
 const ctaText = document.getElementsByClassName("cta-text")[0];
